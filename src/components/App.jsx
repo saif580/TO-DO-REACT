@@ -1,4 +1,5 @@
 import React from "react";
+import AddList from "./addListitem";
 
 function App() {
   const [toDo, setTodo] = React.useState([]);
@@ -27,9 +28,9 @@ function App() {
       </div>
       <div>
         <ul>
-          {toDo.map((i) => {
-            return <li key={i.toString()}>{i}</li>;
-          })}
+          {toDo.map((i) => (
+            <AddList text={i} key={i.toString()} />
+          ))}
         </ul>
       </div>
     </div>
